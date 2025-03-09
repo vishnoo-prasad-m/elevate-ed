@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "e4838c0e-4b0e-429b-b9f8-a3662a0999ee",
+		"name": "Elevate-Ed-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42517005"
+	},
+	"item": [
+		{
+			"name": "Mentor",
+			"item": [
+				{
+					"name": "Get Mentor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mentor/mentorid2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mentor",
+								"mentorid2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Mentor",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"mentor3\",\r\n    \"userId\":\"mentorid3\",\r\n    \"password\":\"password3\",\r\n    \"email\":\"mentor3@gmail.com\",\r\n    \"skills\":[\r\n        {\"name\":\"Math\"},\r\n        {\"name\":\"English\"},\r\n        {\"name\":\"Coding\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mentor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mentor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Mentor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"mentorid3\",\r\n    \"password\":\"password3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mentor/mentor-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mentor",
+								"mentor-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recommendations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mentor/skill/Math",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mentor",
+								"skill",
+								"Math"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Learner",
+			"item": [
+				{
+					"name": "Get Learner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/learner/userid1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"learner",
+								"userid1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Learner",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Learner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"userid1\",\r\n    \"password\":\"password1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/learner/learner-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"learner",
+								"learner-login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Post Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"userid1\",\r\n    \"password\":\"password1\",\r\n    \"name\":\"User1\",\r\n    \"email\":\"user1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/learner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"learner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Messages By receiverId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/mentorid3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"mentorid3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
