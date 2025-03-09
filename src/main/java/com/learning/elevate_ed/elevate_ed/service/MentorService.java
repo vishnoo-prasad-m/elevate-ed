@@ -24,7 +24,6 @@ public class MentorService {
     }
 
     public Mentor addMentor(Mentor mentor) throws ElevateEdException {
-        System.out.println("eotir"+ mentor);
          Optional<Mentor> mentorOptional = mentorRepository.findByUserId(mentor.getUserId());
          if (mentorOptional.isEmpty()) {
             mentor.setPassword(PasswordEncryptor.encryptPassword(mentor.getPassword()));
